@@ -1,0 +1,6 @@
+ &bands
+    prefix='graphene',
+    outdir='./'
+    filband='graphene.band'
+    no_overlap=.true.
+ /

@@ -1,0 +1,29 @@
+ &control
+    calculation         = 'scf'
+    restart_mode        = 'from_scratch'
+    prefix              = 'graphene'
+    tstress             = .false.
+    tprnfor             = .true.
+    pseudo_dir          = './',
+    outdir              = './'
+    wf_collect          = .true.
+ /
+ &system
+    ibrav=  4, celldm(1)=4.651, celldm(3) =5, nat=  2, ntyp= 1,
+    ecutwfc =80.0,
+    occupations='smearing', smearing='gaussian', degauss=0.02
+    nbnd = 20
+/
+&ELECTRONS
+    diagonalization='david'
+    mixing_mode = 'plain'
+    mixing_beta = 0.4
+    conv_thr =  1.0d-10
+/
+ATOMIC_SPECIES
+C   12.0107    C.UPF
+ATOMIC_POSITIONS
+C 0.50 -0.288675135  0.0
+C 0.50  0.288675135  0.0
+K_POINTS automatic
+20 20 1 0 0 0
